@@ -6,10 +6,6 @@ module.exports = function (grunt) {
             test: ['.allure-results']
         },
         babel: {
-            options: {
-                sourceMap: false,
-                optional: ['runtime']
-            },
             dist: {
                 files: [{
                     expand: true,
@@ -46,10 +42,10 @@ module.exports = function (grunt) {
         mochaTest: {
             test: {
                 options: {
-                    require: ['babel/register'],
+                    require: ['babel-core/register'],
                     reporter: 'spec',
                     quiet: false,
-                    timeout: 8000
+                    timeout: 15000
                 },
                 src: 'test/specs/*.js'
             }

@@ -3,7 +3,7 @@
 describe('A broken Suite', () => {
     it('with broken test', () => {
         return browser
-          .url('/index.html')
-          .click('.missing-element')
+            .url('/index.html')
+            .missingCommand()
     })
 })
