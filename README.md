@@ -88,4 +88,5 @@ npm test
 
 ## Supported Allure API
 * `feature(featureName)` – assign feature to test
+* `addEnvironment(name, value)` – save environment value
 
