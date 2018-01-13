@@ -14,6 +14,7 @@
     "release:major": "np major",
     "test": "run-s eslint test:unit",
     "test:unit": "mocha",
+    "report": "node_modules/allure-commandline/bin/allure generate .allure-results --clean && node node_modules/allure-commandline/bin/allure open",
     "prepublish": "npm prune && run-s build",
     "watch": "npm run compile -- --watch"
   },
@@ -43,6 +44,7 @@
     "babel-runtime": "^6.26.0"
   },
   "devDependencies": {
+    "allure-commandline": "^2.5.0",
     "babel-cli": "~6.26.0",
     "babel-core": "~6.25.0",
     "babel-eslint": "~8.1.0",
