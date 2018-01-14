@@ -61,13 +61,14 @@ System.setProperty("jenkins.model.DirectoryBrowserSupport.CSP", "default-src 'se
 Apply and restart the Jenkins server. All assets should now be served correctly.
 
 ### Command-line
-To generate Allure report after test run
+To generate Allure report run
 ```
-run report
+npm run report
 ```
-It will generate report in allure-report folder and automatically open it in default browser.
+This will generate a report (by default in ./allure-report), and open it in your browser: 
+![screenshot 2016-02-05 10.15.57.png](./docs/images/browser.png)
 
-Because before each test .alure-result folder is cleaned, so you should generate report only for one test by setting test in test\mocha.opts
+Because before each test ./.alure-result folder is cleaned, so you should generate report only for one test by setting it in ./test/mocha.opts
 ----
 
 For more information on WebdriverIO see the [homepage](http://webdriver.io).
