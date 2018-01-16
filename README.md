@@ -61,12 +61,14 @@ System.setProperty("jenkins.model.DirectoryBrowserSupport.CSP", "default-src 'se
 Apply and restart the Jenkins server. All assets should now be served correctly.
 
 ### Command-line
-Install the [Allure command-line tool](https://www.npmjs.com/package/allure-commandline), and process the results directory:
-```bash
-allure generate [allure_output_dir] && allure open
+To generate Allure report run
 ```
-This will generate a report (by default in `./allure-report`), and open it in your browser:
+npm run report
+```
+This will generate a report (by default in ./allure-report), and open it in your browser: 
 ![screenshot 2016-02-05 10.15.57.png](./docs/images/browser.png)
+
+Because before each test ./.alure-result folder is cleaned, so you should generate report only for one test by setting it in ./test/mocha.opts
 
 ### Add Screenshots
 Screenshots can be attached to the report by using the `saveScreenshot` function from WebDriverIO in afterStep hook.
