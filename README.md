@@ -58,29 +58,25 @@ System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "default-src 'sel
 System.setProperty("jenkins.model.DirectoryBrowserSupport.CSP", "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline';")
 ```
 
-Apply and restart the Jenkins server. All assets should now be served correctly.
+ Apply and restart the Jenkins server. All assets should now be served correctly.
+ 
+ ### Command-line
+-To generate Allure report after test run
++To generate Allure report run
+ ```
+-run report
++npm run report
+ ```
+-It will generate report in allure-report folder and automatically open it in default browser.
++This will generate a report (by default in ./allure-report), and open it in your browser: 
++![screenshot 2016-02-05 10.15.57.png](./docs/images/browser.png)
+ 
+-Because before each test .alure-result folder is cleaned, so you should generate report only for one test by setting test in test\mocha.opts
++Because before each test ./.alure-result folder is cleaned, so you should generate report only for one test by setting it in ./test/mocha.opts
+ ----
+ 
+ For more information on WebdriverIO see the [homepage](http://webdriver.io).
 
-### Command-line
-Install the [Allure command-line tool](https://www.npmjs.com/package/allure-commandline), and process the results directory:
-```bash
-allure generate [allure_output_dir] && allure open
-```
-This will generate a report (by default in `./allure-report`), and open it in your browser:
-![screenshot 2016-02-05 10.15.57.png](./docs/images/browser.png)
-
-### Add Screenshots
-Screenshots can be attached to the report by using the `saveScreenshot` function from WebDriverIO in afterStep hook.
-```js
-//...
-var name = 'ERROR-chrome-' + Date.now()
-browser.saveScreenshot('./errorShots/' + name + '.png')
-//...
-```
-As shown in the example above, when this function is called, a screenshot image will be created and saved in the directory, as well as attached to the allure report.
-
-----
-
-For more information on WebdriverIO see the [homepage](http://webdriver.io).
 
 ## Development
 
