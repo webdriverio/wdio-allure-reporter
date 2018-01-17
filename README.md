@@ -100,7 +100,7 @@ npm test
 * `feature(featureName)` – assign feature to test
 * `addEnvironment(name, value)` – save environment value
 * `createAttachement(name, content, [type])` – save attachment to test.
-    * `name` (*String*) - attachment name. `Test attachment`by default
+    * `name` (*String*) - attachment name.
     * `content` – attachment content.
     * `type` (*String*, optional) – attachment MIME-type, `text/plain` by default
 
