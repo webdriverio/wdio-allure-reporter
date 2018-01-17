@@ -16,7 +16,9 @@
     "test:unit": "mocha",
     "prepublish": "npm prune && run-s build",
     "watch": "npm run compile -- --watch",
-    "report": "node_modules/allure-commandline/bin/allure generate .allure-results --clean && node node_modules/allure-commandline/bin/allure open"
+    "report": "run-s report:*",
+    "report:generate": "allure generate .allure-results --clean",
+    "report:open": "allure open"  
   },
   "repository": {
     "type": "git",
