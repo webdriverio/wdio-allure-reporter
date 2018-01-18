@@ -95,7 +95,15 @@ Run tests:
 ```
 npm test
 ```
-
+## Displaying the report
+ To generate Allure report run
+  ```
+ npm run report
+  ```
+ This will generate a report (by default in ./allure-report), and open it in your browser: 
+ ![screenshot 2016-02-05 10.15.57.png](./docs/images/browser.png)
+ 
+ Because before each test ./.alure-result folder is cleaned, so you should generate report only for one test by setting it in ./test/mocha.opts
 ## Supported Allure API
 * `feature(featureName)` – assign feature to test
 * `addEnvironment(name, value)` – save environment value
