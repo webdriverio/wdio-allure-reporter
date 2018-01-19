@@ -111,4 +111,5 @@ npm test
     * `name` (*String*) - attachment name.
     * `content` – attachment content.
     * `type` (*String*, optional) – attachment MIME-type, `text/plain` by default
+* `story(storyName)` – assign user story to test
 
