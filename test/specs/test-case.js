@@ -54,4 +54,15 @@ describe('test cases', () => {
             expect(result('test-case').eq(1).attr('start')).to.be.equal(result('test-case').eq(1).attr('stop'))
         })
     })
+
+    it.only('should handle untracked steps without errors', () => {
+        return run(['untracked-step']).then(([result]) => {
+            result('step').each((i, el) => {
+                const step = result(el)
+                expect(step.attr('status')).to.be.ok
+                expect(step.attr('start')).to.be.ok
+                expect(step.attr('stop')).to.be.ok
+            })
+        })
+    })
 })
