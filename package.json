@@ -2,7 +2,7 @@
   "name": "wdio-allure-reporter",
   "version": "0.3.0",
   "description": "A WebdriverIO plugin. Report results in Allure format.",
-  "main": "build/reporter.js",
+  "main": "index.js",
   "scripts": {
     "build": "run-s clean compile",
     "clean": "rm -rf ./build ./coverage ./.allure-results ./screenshots",
