@@ -1,6 +1,6 @@
 'use strict'
 
-const {story} = require('./../../../build/runtime')
+const {story} = require('./../../../build/reporter').Api
 
 describe('Suite with stories', () => {
     it('Test #1', () => {

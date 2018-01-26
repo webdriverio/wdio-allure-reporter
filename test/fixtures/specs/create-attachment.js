@@ -1,6 +1,6 @@
 'use strict'
 
-const {createAttachment} = require('./../../../build/runtime')
+const {createAttachment} = require('./../../../build/reporter').Api
 
 describe('Suite with attachments', () => {
     it('Add attachment with plain text attachment', () => {

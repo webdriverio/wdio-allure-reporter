@@ -1,6 +1,6 @@
 'use strict'
 
-const addDescription = require('./../../../build/runtime').addDescription
+const { addDescription } = require('./../../../build/reporter').Api
 
 describe('Suite with description', () => {
     it('First case - default description type', () => {
