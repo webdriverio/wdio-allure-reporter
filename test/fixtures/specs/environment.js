@@ -1,6 +1,6 @@
 'use strict'
 
-const addEnvironment = require('./../../../build/runtime').addEnvironment
+const { addEnvironment } = require('./../../../build/reporter').Api
 
 describe('Suite with environments', () => {
     it('First case', () => {

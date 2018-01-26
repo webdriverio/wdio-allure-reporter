@@ -1,6 +1,6 @@
 'use strict'
 
-const feature = require('./../../../build/runtime').feature
+const { feature } = require('./../../../build/reporter').Api
 
 describe('Suite with features', () => {
     it('First case', () => {
