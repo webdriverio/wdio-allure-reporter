@@ -114,3 +114,5 @@ npm test
 * `addDescription(description, [type])` – add description to test.
     * `description` (*String*) - description of the test.
     * `type` (*String*, optional) – description type, `text` by default. Values ['text', 'html','markdown']
+* `story(storyName)` – assign user story to test
+
