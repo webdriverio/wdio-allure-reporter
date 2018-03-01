@@ -41,7 +41,7 @@ exports.config = {
 ```
 
 `outputDir` defaults to `./allure-results`. After a test run is complete, you will find that this directory has been populated with an `.xml` file for each spec, plus a number of `.txt` and `.png` files and other attachments.
-`disableWebdriverStepsReporting` - optional parameter(false by default), in order to log only custom commands to the reporter. See 'Add Custom Commands'
+`disableWebdriverStepsReporting` - optional parameter(false by default), in order to log only custom commands to the reporter.
 
 ## Supported Allure API
 * `feature(featureName)` – assign feature to test
@@ -54,6 +54,10 @@ exports.config = {
 * `addDescription(description, [type])` – add description to test.
     * `description` (*String*) - description of the test.
     * `type` (*String*, optional) – description type, `text` by default. Values ['text', 'html','markdown']
+* `createStep(title, body, [bodyLabel])` - add step to test.
+    * `title` (*String*) - name of the step.
+    * `body` (*String*) - body of the step appear as attachment under step
+    * `bodyLabel` (*String*, optional) - body label, `attachment` by default.
 ### Usage
 Allure Api can be accessed using:
 ES5
@@ -99,19 +103,6 @@ allure generate [allure_output_dir] && allure open
 ```
 This will generate a report (by default in `./allure-report`), and open it in your browser:
 ![screenshot 2016-02-05 10.15.57.png](./docs/images/browser.png)
-
-### Add Custom Command
-Example of adding custom command to reporter:
-```js
-  process.send({
-            event: 'runner:customCommand',
-            customCommand: {
-                title: 'Custom command title',
-                bodyLabel : 'Attachment label',
-                body: 'Attachment body',
-            },
-        });
-```
 
 ### Add Screenshots
 Screenshots can be attached to the report by using the `saveScreenshot` function from WebDriverIO in afterStep hook.
