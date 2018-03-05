@@ -41,7 +41,7 @@ exports.config = {
 ```
 
 `outputDir` defaults to `./allure-results`. After a test run is complete, you will find that this directory has been populated with an `.xml` file for each spec, plus a number of `.txt` and `.png` files and other attachments.
-`disableWebdriverStepsReporting` - optional parameter(false by default), in order to log only custom commands to the reporter.
+`disableWebdriverStepsReporting` - optional parameter(false by default), in order to log only custom steps to the reporter.
 
 ## Supported Allure API
 * `feature(featureName)` – assign feature to test
