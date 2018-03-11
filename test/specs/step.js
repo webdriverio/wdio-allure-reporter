@@ -14,7 +14,7 @@ describe('Step', () => {
             expect(result('test-case attachment[title="body label"]')).to.have.lengthOf(1)
         })
     })
-    
+
     it('should have attachment', () => {
         return run(['step']).then((results) => {
             const txtAttachment = getResultFiles('txt')
