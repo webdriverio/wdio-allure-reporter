@@ -16,3 +16,11 @@ Then('I run failing step', () => {
 Then('I see steps after as pending', () => {
     expect(true).to.be.equal(true)
 })
+
+When('Step has DataTable parameter', param => {
+    expect(param.rawTable).to.be.eql([ [ 'some', 'table' ], [ 'passed', 'into' ] ])
+})
+
+When('Step has DocString parameter', param => {
+    expect(param).to.be.equal('some data here')
+})
