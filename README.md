@@ -1,4 +1,4 @@
-WDIO Allure Reporter [![Build Status](https://travis-ci.org/webdriverio/wdio-allure-reporter.svg?branch=master)](https://travis-ci.org/webdriverio/wdio-allure-reporter) [![Code Climate](https://codeclimate.com/github/webdriverio/wdio-allure-reporter/badges/gpa.svg)](https://codeclimate.com/github/webdriverio/wdio-allure-reporter)
+WDIO Allure Reporter [![Build Status](https://travis-ci.org/webdriverio-boneyard/wdio-allure-reporter.svg?branch=master)](https://travis-ci.org/webdriverio-boneyard/wdio-allure-reporter) [![Code Climate](https://codeclimate.com/github/webdriverio/wdio-allure-reporter/badges/gpa.svg)](https://codeclimate.com/github/webdriverio/wdio-allure-reporter)
 ====================
 
 > A WebdriverIO reporter plugin to create [Allure Test Reports](https://docs.qameta.io/allure/).
@@ -53,7 +53,10 @@ exports.config = {
 * `feature(featureName)` – assign feature to test
 * `story(storyName)` – assign user story to test
 * `severity(value)` – assign severity to test
+* `issue(value)` – assign issue id to test
+* `testId(value)` – assign TMS test id to test
 * `addEnvironment(name, value)` – save environment value
+* `addArgument(name, value)` - add additional argument to test
 * `createAttachment(name, content, [type])` – save attachment to test.
     * `name` (*String*) - attachment name.
     * `content` – attachment content.
@@ -142,4 +145,4 @@ npm test
   ```
  This will generate a report (by default in ./allure-report), and open it in your browser
 
- Because before each test ./.alure-result folder is cleaned, so you should generate report only for one test by setting it in ./test/mocha.opts
+ Because the ./allure-report folder is cleaned before each test, you should configure the report for only one test by setting it in ./test/mocha.opts
