@@ -1,5 +1,5 @@
-import { expect } from 'chai';
-import { clean, getResultFiles, getResultFileValue, runCucumber } from '../helper';
+import { expect } from 'chai'
+import { clean, getResultFiles, getResultFileValue, runCucumber } from '../helper'
 
 describe('Cucumber params attachments', () => {
     beforeEach(clean)
